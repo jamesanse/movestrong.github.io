@@ -8,89 +8,7 @@
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;600;700&family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
-  <style>
-    :root{
-      --gold:#d4af37; /* classic metallic gold */
-      --dark:#0d0d0d; /* rich black */
-      --ink:#1a1a1a;
-      --cream:#f7f5f2;
-      --brown-1:#3d2a1e; /* deep espresso */
-      --brown-2:#5a3f2b; /* warm brown */
-    }
-    *{box-sizing:border-box}
-    html,body{margin:0;background:#fff;color:var(--ink);font-family:Inter,system-ui,-apple-system,Segoe UI,Roboto,"Helvetica Neue",Arial,sans-serif;}
-    h1,h2,h3,h4{font-family:"Playfair Display",serif;letter-spacing:.3px}
-    a{color:inherit}
-    /* Utility */
-    .container{max-width:1140px;margin:0 auto;padding:0 20px}
-    .btn{display:inline-block;padding:.9rem 1.35rem;border-radius:999px;text-decoration:none;font-weight:600;transition:.25s ease}
-    .btn-primary{background:var(--gold);color:#111}
-    .btn-primary:hover{filter:brightness(1.08);transform:translateY(-1px)}
-    .btn-outline{border:1.5px solid var(--gold);color:var(--gold)}
-    .btn-outline:hover{background:var(--gold);color:#111}
-    .tag{display:inline-block;padding:.35rem .7rem;border:1px solid var(--gold);border-radius:999px;color:var(--gold);font-size:.8rem;letter-spacing:.6px}
-    .gold{color:var(--gold)}
-    .muted{color:#666}
-    /* Header */
-    header{position:sticky;top:0;z-index:30;background:rgba(255,255,255,.9);backdrop-filter:saturate(120%) blur(8px);border-bottom:1px solid #eee}
-    .nav{display:flex;align-items:center;justify-content:space-between;padding:12px 0}
-    .brand{display:flex;gap:10px;align-items:center}
-    .brand img{width:44px;height:44px;object-fit:contain}
-    .brand .name{font-family:"Playfair Display",serif;font-weight:700;letter-spacing:.4px}
-    nav ul{display:flex;gap:22px;list-style:none;margin:0;padding:0}
-    nav a{padding:8px 2px;text-decoration:none;border-bottom:2px solid transparent}
-    nav a:hover{border-color:var(--gold)}
-    /* Hero */
-    .hero{position:relative;isolation:isolate}
-    .hero::before{content:"";position:absolute;inset:0;background:radial-gradient(1200px 500px at 30% -10%,rgba(212,175,55,.25),transparent 55%),linear-gradient(180deg,#fff 0%, #fff 30%, #f7efe6 100%);z-index:-1}
-    .hero .grid{display:grid;grid-template-columns:1.1fr .9fr;gap:40px;align-items:center;padding:72px 0}
-    .hero h1{font-size:clamp(36px,5vw,56px);line-height:1.05;margin:.2rem 0 .8rem}
-    .hero p{font-size:1.08rem;color:#444}
-    .hero-card{background:linear-gradient(160deg,#3d2a1e,#5a3f2b);color:#f8f1e4;border-radius:18px;padding:28px;box-shadow:0 10px 30px rgba(0,0,0,.15)}
-    .hero-card h3{margin-top:0}
-    .hero-card .price{font-size:2rem;font-weight:700;color:var(--gold)}
-    .hero-badges{display:flex;gap:10px;flex-wrap:wrap;margin:18px 0}
-    /* Sections */
-    section{padding:72px 0}
-    .section-title{font-size:2rem;margin:0 0 10px}
-    .section-sub{color:#666;margin:0 0 28px}
-    /* Services */
-    .services{background:linear-gradient(180deg,#fff,#faf8f5)}
-    .service-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:24px}
-    .card{background:#fff;border:1px solid #eee;border-radius:16px;padding:22px;box-shadow:0 4px 14px rgba(0,0,0,.05)}
-    .card h3{margin:0 0 6px;font-size:1.1rem}
-    .card p{margin:0;color:#5b5b5b}
-    .icon{width:28px;height:28px;display:inline-block;margin-right:8px;vertical-align:-6px}
-    /* Offer band */
-    .offer{background:linear-gradient(135deg,var(--brown-1),var(--brown-2));color:#f6efe5;position:relative}
-    .offer .inner{display:flex;align-items:center;justify-content:space-between;gap:24px}
-    .offer .inner p{margin:10px 0}
-    /* Team */
-    .team-grid{display:grid;grid-template-columns:repeat(2,1fr);gap:28px}
-    .therapist{display:grid;grid-template-columns:96px 1fr;gap:18px;align-items:start}
-    .avatar{width:96px;height:96px;border-radius:50%;border:2px solid var(--gold);background:linear-gradient(145deg,#f3e9d2,#fff);display:flex;align-items:center;justify-content:center;font-weight:700}
-    /* Reviews */
-    .reviews{background:#fff}
-    .review-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:22px}
-    blockquote{margin:0;padding:22px;border:1px solid #eee;border-radius:14px;background:#fff;box-shadow:0 6px 20px rgba(0,0,0,.05)}
-    blockquote footer{margin-top:10px;color:#888;font-size:.9rem}
-    /* Contact */
-    .contact{background:linear-gradient(180deg,#faf8f5,#fff)}
-    .contact-grid{display:grid;grid-template-columns:1.1fr .9fr;gap:26px}
-    .contact .card{height:100%}
-    .map{border:0;width:100%;height:320px;border-radius:14px}
-    /* Footer */
-    footer{background:#0f0f0f;color:#d9d9d9;padding:34px 0}
-    footer a{color:#d9d9d9}
-    .footer-top{display:flex;align-items:center;justify-content:space-between;gap:20px}
-    .fine{color:#9a9a9a;font-size:.9rem}
-    /* Responsive */
-    @media (max-width: 980px){
-      .hero .grid,.service-grid,.team-grid,.review-grid,.contact-grid{grid-template-columns:1fr}
-      .footer-top{flex-direction:column;align-items:flex-start}
-      .hero-card{order:2}
-    }
-  </style>
+  <link rel="stylesheet" href="styles.css">
 </head>
 <body>
   <!-- Header -->
@@ -98,7 +16,7 @@
     <div class="container nav">
       <a class="brand" href="#home" aria-label="MoveStrong Home">
         <!-- Replace src with your transparent PNG logo -->
-        <img src="logo.png" alt="MoveStrong Logo" onerror="this.style.display='none'" />
+        <img src="asset/logo.png" alt="MoveStrong Logo" onerror="this.style.display='none'" />
         <div class="name">MoveStrong Massage Therapy & Rehab</div>
       </a>
       <nav aria-label="Primary">
@@ -138,8 +56,8 @@
         <p>Includes Starbucks gift card + complimentary coffee, tea & chocolate at the clinic.</p>
         <hr style="border:.5px solid rgba(255,255,255,.25);margin:18px 0">
         <p style="margin:0">Scan to book:</p>
-        <!-- Replace qr.png with your QR code image -->
-        <img src="qr.png" alt="Book online QR code" style="width:140px;height:140px;border-radius:12px;background:#fff;padding:8px" />
+        <!-- Replace asset/qr.png with your QR code image -->
+        <img src="asset/qr.png" alt="Book online QR code" style="width:140px;height:140px;border-radius:12px;background:#fff;padding:8px" />
       </div>
     </div>
   </section>
@@ -236,7 +154,7 @@
         <!-- Replace the src with your embedded Google Map link if desired -->
         <iframe class="map" loading="lazy" allowfullscreen title="Map"></iframe>
         <p class="muted" style="margin-top:10px">Scan in‑clinic to book:
-          <img src="qr.png" alt="QR to book" style="width:120px;height:120px;border-radius:12px;background:#fff;padding:8px;margin-left:10px;vertical-align:middle"/>
+          <img src="asset/qr.png" alt="QR to book" style="width:120px;height:120px;border-radius:12px;background:#fff;padding:8px;margin-left:10px;vertical-align:middle"/>
         </p>
       </div>
     </div>
@@ -247,7 +165,7 @@
     <div class="container">
       <div class="footer-top">
         <div class="brand" style="color:#fff">
-          <img src="logo.png" alt="MoveStrong Logo" onerror="this.style.display='none'" />
+          <img src="asset/logo.png" alt="MoveStrong Logo" onerror="this.style.display='none'" />
           <div class="name">MoveStrong Massage Therapy & Rehab</div>
         </div>
         <div>
