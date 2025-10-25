@@ -1,11 +1,12 @@
 :root{
   --gold:#E1C16E; /* classic metallic gold */
+  --darkgold: #B8860B; /* dark goldenrod */
   --dark:#0d0d0d; /* rich black */
   --ink:#1a1a1a;
   --cream:#f7f5f2;
   --brown-1:#3d2a1e; /* deep espresso */
   --brown-2:#5a3f2b; /* warm brown */
-  --blue-1:#4682B4; /* steel blue */
+  --blue-1:#abc8cf; /* steel blue */
 }
 *{box-sizing:border-box}
 html,body{margin:0;background:#fff;color:var(--ink);font-family:Inter,system-ui,-apple-system,Segoe UI,Roboto,"Helvetica Neue",Arial,sans-serif;}
@@ -18,14 +19,15 @@ a{color:inherit}
 .btn-primary:hover{filter:brightness(1.08);transform:translateY(-1px)}
 .btn-outline{border:1.5px solid var(--gold);color:var(--gold)}
 .btn-outline:hover{background:var(--gold);color:#111}
-.tag{display:inline-block;padding:.35rem .7rem;border:1px solid var(--gold);border-radius:999px;color:var(--gold);font-size:.8rem;letter-spacing:.6px}
+.tag{display:inline-block;padding:.35rem .7rem;border:1px solid var(--darkgold);border-radius:999px;color:var(--darkgold);font-size:.8rem;letter-spacing:.6px}
 .gold{color:var(--gold)}
+.black{color:#000000;font-size:1.8rem}
 .muted{color:#666}
 /* Header */
 header{position:sticky;top:0;z-index:30;background:rgba(255,255,255,.9);backdrop-filter:saturate(120%) blur(8px);border-bottom:1px solid #eee}
 .nav{display:flex;align-items:center;justify-content:space-between;padding:12px 0}
-.brand{display:flex;gap:10px;align-items:center}
-.brand img{width:44px;height:44px;object-fit:contain}
+.brand{display:flex;gap:10px;align-items:center;text-decoration:none}
+.brand img{width:60px;height:60px;object-fit:contain}
 .brand .name{font-family:"Playfair Display",serif;font-weight:700;letter-spacing:.4px}
 nav ul{display:flex;gap:22px;list-style:none;margin:0;padding:0}
 nav a{padding:8px 2px;text-decoration:none;border-bottom:2px solid transparent}
@@ -36,8 +38,9 @@ nav a:hover{border-color:var(--gold)}
 .hero .grid{display:grid;grid-template-columns:1.1fr .9fr;gap:40px;align-items:center;padding:72px 0}
 .hero h1{font-size:clamp(36px,5vw,56px);line-height:1.05;margin:.2rem 0 .8rem}
 .hero p{font-size:1.08rem;color:#444}
+.tag-main{font-size:1.2rem}
 .hero-card{background:linear-gradient(160deg,var(--blue-1),var(--blue-1));color:#ffffff;border-radius:18px;padding:28px;box-shadow:0 10px 30px rgba(0,0,0,.15)}
-.hero-card h3{margin-top:0;color:var(--gold)}
+.hero-card h3{margin-top:0;color:#000000}
 .hero-card p{color:#ffffff}
 .hero-card .muted{color:#ffffff}
 .hero-card .price{font-size:2rem;font-weight:700;color:#ffffff}
@@ -56,7 +59,7 @@ section{padding:72px 0}
 /* Offer band */
 .offer{background:linear-gradient(135deg,var(--blue-1),var(--blue-1));color:#ffffff;position:relative}
 .offer .inner{display:flex;align-items:center;justify-content:space-between;gap:24px}
-.offer .inner p{margin:10px 0}
+.offer .inner p{margin:10px 0;font-size:1.5rem}
 /* Team */
 .team-grid{display:grid;grid-template-columns:repeat(2,1fr);gap:28px}
 .therapist{display:grid;grid-template-columns:96px 1fr;gap:18px;align-items:start}
