@@ -1,10 +1,11 @@
 :root{
-  --gold:#d4af37; /* classic metallic gold */
+  --gold:#E1C16E; /* classic metallic gold */
   --dark:#0d0d0d; /* rich black */
   --ink:#1a1a1a;
   --cream:#f7f5f2;
   --brown-1:#3d2a1e; /* deep espresso */
   --brown-2:#5a3f2b; /* warm brown */
+  --blue-1:#4682B4; /* steel blue */
 }
 *{box-sizing:border-box}
 html,body{margin:0;background:#fff;color:var(--ink);font-family:Inter,system-ui,-apple-system,Segoe UI,Roboto,"Helvetica Neue",Arial,sans-serif;}
@@ -35,9 +36,11 @@ nav a:hover{border-color:var(--gold)}
 .hero .grid{display:grid;grid-template-columns:1.1fr .9fr;gap:40px;align-items:center;padding:72px 0}
 .hero h1{font-size:clamp(36px,5vw,56px);line-height:1.05;margin:.2rem 0 .8rem}
 .hero p{font-size:1.08rem;color:#444}
-.hero-card{background:linear-gradient(160deg,#3d2a1e,#5a3f2b);color:#f8f1e4;border-radius:18px;padding:28px;box-shadow:0 10px 30px rgba(0,0,0,.15)}
-.hero-card h3{margin-top:0}
-.hero-card .price{font-size:2rem;font-weight:700;color:var(--gold)}
+.hero-card{background:linear-gradient(160deg,var(--blue-1),var(--blue-1));color:#ffffff;border-radius:18px;padding:28px;box-shadow:0 10px 30px rgba(0,0,0,.15)}
+.hero-card h3{margin-top:0;color:var(--gold)}
+.hero-card p{color:#ffffff}
+.hero-card .muted{color:#ffffff}
+.hero-card .price{font-size:2rem;font-weight:700;color:#ffffff}
 .hero-badges{display:flex;gap:10px;flex-wrap:wrap;margin:18px 0}
 /* Sections */
 section{padding:72px 0}
@@ -51,7 +54,7 @@ section{padding:72px 0}
 .card p{margin:0;color:#5b5b5b}
 .icon{width:28px;height:28px;display:inline-block;margin-right:8px;vertical-align:-6px}
 /* Offer band */
-.offer{background:linear-gradient(135deg,var(--brown-1),var(--brown-2));color:#f6efe5;position:relative}
+.offer{background:linear-gradient(135deg,var(--blue-1),var(--blue-1));color:#ffffff;position:relative}
 .offer .inner{display:flex;align-items:center;justify-content:space-between;gap:24px}
 .offer .inner p{margin:10px 0}
 /* Team */
